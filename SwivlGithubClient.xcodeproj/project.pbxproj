@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		00E13B3ADEBC6627FC51AC73 /* Pods_SwivlGithubClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFBE65BC6F49F42016D2E07D /* Pods_SwivlGithubClient.framework */; };
+		FA20874E213734B60056F52E /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA20874D213734B60056F52E /* UserViewModel.swift */; };
+		FA208750213734D60056F52E /* UsersSectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA20874F213734D60056F52E /* UsersSectionViewModel.swift */; };
 		FA867B552136C4CF008470E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA867B542136C4CF008470E8 /* AppDelegate.swift */; };
 		FA867B5C2136C4D0008470E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA867B5B2136C4D0008470E8 /* Assets.xcassets */; };
 		FA867B5F2136C4D0008470E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA867B5D2136C4D0008470E8 /* LaunchScreen.storyboard */; };
@@ -18,6 +20,11 @@
 		FA867B882136D7C3008470E8 /* SearchDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA867B872136D7C3008470E8 /* SearchDescriptor.swift */; };
 		FA867B8A2136DBD6008470E8 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA867B892136DBD6008470E8 /* UserService.swift */; };
 		FA867B8D2136E16E008470E8 /* UsersResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA867B8C2136E16E008470E8 /* UsersResponse.swift */; };
+		FA867B8F21370FAC008470E8 /* UsersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA867B8E21370FAC008470E8 /* UsersViewController.xib */; };
+		FA867B922137136E008470E8 /* UsersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA867B912137136E008470E8 /* UsersViewModel.swift */; };
+		FA867B9521371FD1008470E8 /* UsersSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA867B9421371FD1008470E8 /* UsersSectionController.swift */; };
+		FA867B9921372336008470E8 /* UserCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA867B9821372336008470E8 /* UserCollectionViewCell.swift */; };
+		FA867B9B21372345008470E8 /* UserCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA867B9A21372345008470E8 /* UserCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +41,8 @@
 		506199091D3C392617934293 /* Pods-SwivlGithubClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwivlGithubClient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwivlGithubClient/Pods-SwivlGithubClient.debug.xcconfig"; sourceTree = "<group>"; };
 		CFBE65BC6F49F42016D2E07D /* Pods_SwivlGithubClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwivlGithubClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D139048A6959423DF5CC97E5 /* Pods-SwivlGithubClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwivlGithubClient.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwivlGithubClient/Pods-SwivlGithubClient.release.xcconfig"; sourceTree = "<group>"; };
+		FA20874D213734B60056F52E /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		FA20874F213734D60056F52E /* UsersSectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersSectionViewModel.swift; sourceTree = "<group>"; };
 		FA867B512136C4CF008470E8 /* SwivlGithubClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwivlGithubClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA867B542136C4CF008470E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA867B5B2136C4D0008470E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -48,6 +57,11 @@
 		FA867B872136D7C3008470E8 /* SearchDescriptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDescriptor.swift; sourceTree = "<group>"; };
 		FA867B892136DBD6008470E8 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		FA867B8C2136E16E008470E8 /* UsersResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersResponse.swift; sourceTree = "<group>"; };
+		FA867B8E21370FAC008470E8 /* UsersViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UsersViewController.xib; sourceTree = "<group>"; };
+		FA867B912137136E008470E8 /* UsersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewModel.swift; sourceTree = "<group>"; };
+		FA867B9421371FD1008470E8 /* UsersSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersSectionController.swift; sourceTree = "<group>"; };
+		FA867B9821372336008470E8 /* UserCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCollectionViewCell.swift; sourceTree = "<group>"; };
+		FA867B9A21372345008470E8 /* UserCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +100,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		FA20874C213734A10056F52E /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				FA867B912137136E008470E8 /* UsersViewModel.swift */,
+				FA20874D213734B60056F52E /* UserViewModel.swift */,
+				FA20874F213734D60056F52E /* UsersSectionViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		FA867B482136C4CE008470E8 = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +133,7 @@
 		FA867B532136C4CF008470E8 /* SwivlGithubClient */ = {
 			isa = PBXGroup;
 			children = (
+				FA867B9621372300008470E8 /* Views */,
 				FA867B7E2136D206008470E8 /* Network */,
 				FA867B7D2136D1F8008470E8 /* Services */,
 				FA867B7A2136C850008470E8 /* Entities */,
@@ -140,7 +165,9 @@
 		FA867B772136C63E008470E8 /* Users */ = {
 			isa = PBXGroup;
 			children = (
-				FA867B742136C5CB008470E8 /* UsersViewController.swift */,
+				FA20874C213734A10056F52E /* ViewModels */,
+				FA867B9321371FBC008470E8 /* SectionControllers */,
+				FA867B902137134C008470E8 /* View */,
 			);
 			path = Users;
 			sourceTree = "<group>";
@@ -210,6 +237,40 @@
 				FA867B8C2136E16E008470E8 /* UsersResponse.swift */,
 			);
 			path = ResponseModels;
+			sourceTree = "<group>";
+		};
+		FA867B902137134C008470E8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FA867B742136C5CB008470E8 /* UsersViewController.swift */,
+				FA867B8E21370FAC008470E8 /* UsersViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FA867B9321371FBC008470E8 /* SectionControllers */ = {
+			isa = PBXGroup;
+			children = (
+				FA867B9421371FD1008470E8 /* UsersSectionController.swift */,
+			);
+			path = SectionControllers;
+			sourceTree = "<group>";
+		};
+		FA867B9621372300008470E8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FA867B972137230F008470E8 /* CollectionViewsCells */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FA867B972137230F008470E8 /* CollectionViewsCells */ = {
+			isa = PBXGroup;
+			children = (
+				FA867B9821372336008470E8 /* UserCollectionViewCell.swift */,
+				FA867B9A21372345008470E8 /* UserCollectionViewCell.xib */,
+			);
+			path = CollectionViewsCells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,6 +357,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA867B5F2136C4D0008470E8 /* LaunchScreen.storyboard in Resources */,
+				FA867B9B21372345008470E8 /* UserCollectionViewCell.xib in Resources */,
+				FA867B8F21370FAC008470E8 /* UsersViewController.xib in Resources */,
 				FA867B5C2136C4D0008470E8 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -366,12 +429,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA867B752136C5CB008470E8 /* UsersViewController.swift in Sources */,
+				FA208750213734D60056F52E /* UsersSectionViewModel.swift in Sources */,
+				FA20874E213734B60056F52E /* UserViewModel.swift in Sources */,
 				FA867B552136C4CF008470E8 /* AppDelegate.swift in Sources */,
 				FA867B8A2136DBD6008470E8 /* UserService.swift in Sources */,
 				FA867B7C2136C874008470E8 /* User.swift in Sources */,
 				FA867B842136D287008470E8 /* GithubAPI.swift in Sources */,
+				FA867B922137136E008470E8 /* UsersViewModel.swift in Sources */,
+				FA867B9521371FD1008470E8 /* UsersSectionController.swift in Sources */,
 				FA867B8D2136E16E008470E8 /* UsersResponse.swift in Sources */,
 				FA867B882136D7C3008470E8 /* SearchDescriptor.swift in Sources */,
+				FA867B9921372336008470E8 /* UserCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

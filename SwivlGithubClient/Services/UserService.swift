@@ -9,20 +9,24 @@
 import RxSwift
 import Moya
 
-class UserService {
-    func getUsers() -> Observable<[User]> {
+protocol UserService {
+    func getUsers(since: Int?) -> Observable<[User]>
+    func getFollowers(userName: String) -> Observable<[User]>
+}
+
+class GithubUserService: UserService {
+    func getUsers(since: Int?) -> Observable<[User]> {
         return GithubAPIProvider.rx
-            .request(.users)
+            .request(.users(since: since ?? 0))
             .asObservable()
-            .map(UsersResponse.self)
-            .map { $0.users }
+            .debug()
+            .map([User].self)
     }
 
     func getFollowers(userName: String) -> Observable<[User]> {
         return GithubAPIProvider.rx
             .request(.followers(userName: userName))
             .asObservable()
-            .map(UsersResponse.self)
-            .map { $0.users }
+            .map([User].self)
     }
 }

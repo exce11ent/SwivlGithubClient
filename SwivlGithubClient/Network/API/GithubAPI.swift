@@ -17,7 +17,7 @@ let webPlugins: [PluginType] = []
 let GithubAPIProvider = MoyaProvider<GithubAPI>(plugins: webPlugins)
 
 enum GithubAPI {
-    case users
+    case users(since: Int)
     case usersSearch(descriptor: SearchDescriptor)
     case followers(userName: String)
 }
@@ -50,7 +50,10 @@ extension GithubAPI: TargetType {
         switch self {
         case .usersSearch(let descriptor):
             return .requestParameters(parameters: descriptor.asParameters(),
-                                      encoding: JSONEncoding.default)
+                                      encoding: URLEncoding.default)
+        case .users(let since):
+            return .requestParameters(parameters: ["since" : since],
+                                      encoding: URLEncoding.default)
         default:
             return .requestPlain
         }

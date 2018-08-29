@@ -14,6 +14,8 @@
 		FA867B6A2136C4D0008470E8 /* SwivlGithubClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA867B692136C4D0008470E8 /* SwivlGithubClientTests.swift */; };
 		FA867B752136C5CB008470E8 /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA867B742136C5CB008470E8 /* UsersViewController.swift */; };
 		FA867B7C2136C874008470E8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA867B7B2136C874008470E8 /* User.swift */; };
+		FA867B842136D287008470E8 /* GithubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA867B832136D287008470E8 /* GithubAPI.swift */; };
+		FA867B882136D7C3008470E8 /* SearchDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA867B872136D7C3008470E8 /* SearchDescriptor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,8 @@
 		FA867B6B2136C4D0008470E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA867B742136C5CB008470E8 /* UsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
 		FA867B7B2136C874008470E8 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		FA867B832136D287008470E8 /* GithubAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubAPI.swift; sourceTree = "<group>"; };
+		FA867B872136D7C3008470E8 /* SearchDescriptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDescriptor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,8 @@
 		FA867B532136C4CF008470E8 /* SwivlGithubClient */ = {
 			isa = PBXGroup;
 			children = (
+				FA867B7E2136D206008470E8 /* Network */,
+				FA867B7D2136D1F8008470E8 /* Services */,
 				FA867B7A2136C850008470E8 /* Entities */,
 				FA867B792136C665008470E8 /* Resources */,
 				FA867B762136C62C008470E8 /* Scenes */,
@@ -158,6 +164,38 @@
 				FA867B7B2136C874008470E8 /* User.swift */,
 			);
 			path = Entities;
+			sourceTree = "<group>";
+		};
+		FA867B7D2136D1F8008470E8 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		FA867B7E2136D206008470E8 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				FA867B862136D7A4008470E8 /* Models */,
+				FA867B822136D277008470E8 /* API */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		FA867B822136D277008470E8 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				FA867B832136D287008470E8 /* GithubAPI.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		FA867B862136D7A4008470E8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FA867B872136D7C3008470E8 /* SearchDescriptor.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,8 +301,6 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-SwivlGithubClient/Pods-SwivlGithubClient-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
@@ -276,8 +312,6 @@
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IGListKit.framework",
@@ -297,15 +331,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-SwivlGithubClient-checkManifestLockResult.txt",
 			);
@@ -324,6 +354,8 @@
 				FA867B752136C5CB008470E8 /* UsersViewController.swift in Sources */,
 				FA867B552136C4CF008470E8 /* AppDelegate.swift in Sources */,
 				FA867B7C2136C874008470E8 /* User.swift in Sources */,
+				FA867B842136D287008470E8 /* GithubAPI.swift in Sources */,
+				FA867B882136D7C3008470E8 /* SearchDescriptor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -476,8 +508,8 @@
 			baseConfigurationReference = 506199091D3C392617934293 /* Pods-SwivlGithubClient.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = S6P2T9225A;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = SwivlGithubClient/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -486,6 +518,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.vitaliikraiovyi.SwivlGithubClient;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -496,8 +529,8 @@
 			baseConfigurationReference = D139048A6959423DF5CC97E5 /* Pods-SwivlGithubClient.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = S6P2T9225A;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = SwivlGithubClient/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -506,6 +539,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.vitaliikraiovyi.SwivlGithubClient;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

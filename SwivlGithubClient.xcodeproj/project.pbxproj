@@ -19,7 +19,6 @@
 		FA867B842136D287008470E8 /* GithubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA867B832136D287008470E8 /* GithubAPI.swift */; };
 		FA867B882136D7C3008470E8 /* SearchDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA867B872136D7C3008470E8 /* SearchDescriptor.swift */; };
 		FA867B8A2136DBD6008470E8 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA867B892136DBD6008470E8 /* UserService.swift */; };
-		FA867B8D2136E16E008470E8 /* UsersResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA867B8C2136E16E008470E8 /* UsersResponse.swift */; };
 		FA867B8F21370FAC008470E8 /* UsersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA867B8E21370FAC008470E8 /* UsersViewController.xib */; };
 		FA867B922137136E008470E8 /* UsersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA867B912137136E008470E8 /* UsersViewModel.swift */; };
 		FA867B9521371FD1008470E8 /* UsersSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA867B9421371FD1008470E8 /* UsersSectionController.swift */; };
@@ -67,7 +66,6 @@
 		FA867B832136D287008470E8 /* GithubAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubAPI.swift; sourceTree = "<group>"; };
 		FA867B872136D7C3008470E8 /* SearchDescriptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDescriptor.swift; sourceTree = "<group>"; };
 		FA867B892136DBD6008470E8 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
-		FA867B8C2136E16E008470E8 /* UsersResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersResponse.swift; sourceTree = "<group>"; };
 		FA867B8E21370FAC008470E8 /* UsersViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UsersViewController.xib; sourceTree = "<group>"; };
 		FA867B912137136E008470E8 /* UsersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewModel.swift; sourceTree = "<group>"; };
 		FA867B9421371FD1008470E8 /* UsersSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersSectionController.swift; sourceTree = "<group>"; };
@@ -235,7 +233,6 @@
 		FA867B7E2136D206008470E8 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				FA867B8B2136E11D008470E8 /* ResponseModels */,
 				FA867B862136D7A4008470E8 /* Models */,
 				FA867B822136D277008470E8 /* API */,
 			);
@@ -257,14 +254,6 @@
 				FAB06D962137D84C008B0112 /* PageDescriptor.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		FA867B8B2136E11D008470E8 /* ResponseModels */ = {
-			isa = PBXGroup;
-			children = (
-				FA867B8C2136E16E008470E8 /* UsersResponse.swift */,
-			);
-			path = ResponseModels;
 			sourceTree = "<group>";
 		};
 		FA867B902137134C008470E8 /* ViewController */ = {
@@ -536,7 +525,6 @@
 				FA867B922137136E008470E8 /* UsersViewModel.swift in Sources */,
 				FAB06D932137CEDF008B0112 /* ShortProfileCollectionViewCell.swift in Sources */,
 				FA867B9521371FD1008470E8 /* UsersSectionController.swift in Sources */,
-				FA867B8D2136E16E008470E8 /* UsersResponse.swift in Sources */,
 				FAB06D972137D84C008B0112 /* PageDescriptor.swift in Sources */,
 				FA867B882136D7C3008470E8 /* SearchDescriptor.swift in Sources */,
 				FA867B9921372336008470E8 /* UserCollectionViewCell.swift in Sources */,

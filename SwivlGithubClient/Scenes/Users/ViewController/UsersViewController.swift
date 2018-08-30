@@ -3,7 +3,7 @@
 //  SwivlGithubClient
 //
 //  Created by Vitalii Krayovyi on 8/29/18.
-//  Copyright © 2018 Helen Marlen. All rights reserved.
+//  Copyright © 2018 Vitalii Kraiovyi. All rights reserved.
 //
 
 import UIKit

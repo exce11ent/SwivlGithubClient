@@ -19,8 +19,7 @@ class GithubUserService: UserService {
         return GithubAPIProvider.rx
             .request(.users(since: since ?? 0))
             .asObservable()
-            .debug()
-            .map([User].self).debug()
+            .map([User].self)
     }
 
     func getFollowers(userName: String, paginator: PageDescriptor) -> Observable<[User]> {

@@ -153,14 +153,14 @@
 		FA867B532136C4CF008470E8 /* SwivlGithubClient */ = {
 			isa = PBXGroup;
 			children = (
-				FAB06D802137B6EE008B0112 /* Extensions */,
-				FA867B9621372300008470E8 /* Views */,
-				FA867B7E2136D206008470E8 /* Network */,
-				FA867B7D2136D1F8008470E8 /* Services */,
+				FA867B542136C4CF008470E8 /* AppDelegate.swift */,
 				FA867B7A2136C850008470E8 /* Entities */,
+				FAB06D802137B6EE008B0112 /* Extensions */,
+				FA867B7E2136D206008470E8 /* Network */,
 				FA867B792136C665008470E8 /* Resources */,
 				FA867B762136C62C008470E8 /* Scenes */,
-				FA867B542136C4CF008470E8 /* AppDelegate.swift */,
+				FA867B7D2136D1F8008470E8 /* Services */,
+				FA867B9621372300008470E8 /* Views */,
 			);
 			path = SwivlGithubClient;
 			sourceTree = "<group>";
@@ -187,9 +187,9 @@
 		FA867B772136C63E008470E8 /* Users */ = {
 			isa = PBXGroup;
 			children = (
-				FA20874C213734A10056F52E /* ViewModels */,
 				FA867B9321371FBC008470E8 /* SectionControllers */,
 				FA867B902137134C008470E8 /* ViewController */,
+				FA20874C213734A10056F52E /* ViewModels */,
 			);
 			path = Users;
 			sourceTree = "<group>";

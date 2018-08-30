@@ -74,6 +74,7 @@ extension UsersViewController: UsersViewModelDelegate {
 
     func didFailLoadingWith(error: Error) {
         refreshControl.endRefreshing()
+        showError(error: error)
     }
 }
 

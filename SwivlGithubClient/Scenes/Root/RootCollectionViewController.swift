@@ -54,6 +54,12 @@ class RootCollectionViewController: UIViewController, UIScrollViewDelegate {
             loadMoreData()
         }
     }
+
+    func showError(error: Error) {
+        let controller = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
+        controller.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        self.present(controller, animated: true, completion: nil)
+    }
 }
 
 

@@ -77,6 +77,7 @@ extension FollowersViewController: FollowersViewModelDelegate {
 
     func didFailLoadingWith(error: Error) {
         refreshControl.endRefreshing()
+        showError(error: error)
     }
 }
 

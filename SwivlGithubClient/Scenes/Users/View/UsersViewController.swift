@@ -8,6 +8,7 @@
 
 import UIKit
 import IGListKit
+import SafariServices
 
 class UsersViewController: UIViewController {
 
@@ -55,13 +56,14 @@ class UsersViewController: UIViewController {
 extension UsersViewController: ListAdapterDataSource {
 
     func objects(for listAdapter: ListAdapter) -> [ListDiffable] {
-        let objects: [ListDiffable] = []
-        return objects
+        return viewModel.viewModels
     }
 
     func listAdapter(_ listAdapter: ListAdapter, sectionControllerFor object: Any) -> ListSectionController {
         if object is UsersSectionViewModel {
-            return UsersSectionController()
+            let controller = UsersSectionController()
+            controller.delegate = self
+            return controller
         }
         return ListSectionController()
     }
@@ -93,6 +95,17 @@ extension UsersViewController: UsersViewModelDelegate {
 
     func didFailLoadingWith(error: Error) {
         refreshControl.endRefreshing()
+    }
+}
+
+extension UsersViewController: UsersSectionControllerDelegate {
+    func didTapProfileLink(url: URL) {
+        let safari = SFSafariViewController(url: url)
+        navigationController?.present(safari, animated: true, completion: nil)
+    }
+
+    func didSelectUser(with viewModel: UserViewModel) {
+
     }
 }
 

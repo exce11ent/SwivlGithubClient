@@ -20,7 +20,7 @@ class GithubUserService: UserService {
             .request(.users(since: since ?? 0))
             .asObservable()
             .debug()
-            .map([User].self)
+            .map([User].self).debug()
     }
 
     func getFollowers(userName: String) -> Observable<[User]> {

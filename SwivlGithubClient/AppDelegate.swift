@@ -18,7 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         let viewModel = UsersViewModel(userService: GithubUserService())
         let listViewController = UsersViewController(viewModel: viewModel)
-        window?.rootViewController = listViewController
+        let navigationController = UINavigationController(rootViewController: listViewController)
+        window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
         
         return true

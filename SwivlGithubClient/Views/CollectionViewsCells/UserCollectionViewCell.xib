@@ -32,7 +32,7 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lbj-zq-0Xs">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lbj-zq-0Xs">
                         <rect key="frame" x="140" y="51.5" width="222" height="20.5"/>
                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                         <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -53,9 +53,9 @@
             <viewLayoutGuide key="safeArea" id="Gzd-8b-oMG"/>
             <size key="customSize" width="382" height="118"/>
             <connections>
-                <outlet property="avatarImageView" destination="feP-W8-m2T" id="LmL-7g-LQE"/>
-                <outlet property="nicknameLabel" destination="5rd-Nk-bmZ" id="Ovn-FW-i6R"/>
-                <outlet property="profileUrlLabel" destination="lbj-zq-0Xs" id="qgZ-XM-Kyw"/>
+                <outlet property="avatarImageView" destination="feP-W8-m2T" id="QaT-X3-MDW"/>
+                <outlet property="nicknameLabel" destination="5rd-Nk-bmZ" id="Db7-eG-sLw"/>
+                <outlet property="profileUrlLabel" destination="lbj-zq-0Xs" id="GQh-Ud-Nib"/>
             </connections>
             <point key="canvasLocation" x="33" y="-125"/>
         </collectionViewCell>

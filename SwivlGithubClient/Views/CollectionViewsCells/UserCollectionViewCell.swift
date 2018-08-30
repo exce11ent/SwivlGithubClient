@@ -57,7 +57,9 @@ class UserCollectionViewCell: UICollectionViewCell {
 
     private func update(with model: Model) {
         if let avatarUrl = model.avatarUrl {
-            avatarImageView.kf.setImage(with: ImageResource(downloadURL: avatarUrl))
+            avatarImageView.kf.indicatorType = .activity
+            let resource = ImageResource(downloadURL: avatarUrl)
+            avatarImageView.kf.setImage(with: resource, options: [.transition(.fade(0.1))])
         }
 
         nicknameLabel.text = model.nickname

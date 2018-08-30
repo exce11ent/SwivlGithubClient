@@ -25,6 +25,7 @@
 		FA867B9521371FD1008470E8 /* UsersSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA867B9421371FD1008470E8 /* UsersSectionController.swift */; };
 		FA867B9921372336008470E8 /* UserCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA867B9821372336008470E8 /* UserCollectionViewCell.swift */; };
 		FA867B9B21372345008470E8 /* UserCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA867B9A21372345008470E8 /* UserCollectionViewCell.xib */; };
+		FAB06D822137B70C008B0112 /* UIView+Nib.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB06D812137B70C008B0112 /* UIView+Nib.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		FA867B9421371FD1008470E8 /* UsersSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersSectionController.swift; sourceTree = "<group>"; };
 		FA867B9821372336008470E8 /* UserCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCollectionViewCell.swift; sourceTree = "<group>"; };
 		FA867B9A21372345008470E8 /* UserCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCollectionViewCell.xib; sourceTree = "<group>"; };
+		FAB06D812137B70C008B0112 /* UIView+Nib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Nib.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +135,7 @@
 		FA867B532136C4CF008470E8 /* SwivlGithubClient */ = {
 			isa = PBXGroup;
 			children = (
+				FAB06D802137B6EE008B0112 /* Extensions */,
 				FA867B9621372300008470E8 /* Views */,
 				FA867B7E2136D206008470E8 /* Network */,
 				FA867B7D2136D1F8008470E8 /* Services */,
@@ -271,6 +274,14 @@
 				FA867B9A21372345008470E8 /* UserCollectionViewCell.xib */,
 			);
 			path = CollectionViewsCells;
+			sourceTree = "<group>";
+		};
+		FAB06D802137B6EE008B0112 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FAB06D812137B70C008B0112 /* UIView+Nib.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -433,6 +444,7 @@
 				FA20874E213734B60056F52E /* UserViewModel.swift in Sources */,
 				FA867B552136C4CF008470E8 /* AppDelegate.swift in Sources */,
 				FA867B8A2136DBD6008470E8 /* UserService.swift in Sources */,
+				FAB06D822137B70C008B0112 /* UIView+Nib.swift in Sources */,
 				FA867B7C2136C874008470E8 /* User.swift in Sources */,
 				FA867B842136D287008470E8 /* GithubAPI.swift in Sources */,
 				FA867B922137136E008470E8 /* UsersViewModel.swift in Sources */,

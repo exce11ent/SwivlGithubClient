@@ -20,7 +20,7 @@ protocol UsersViewModelDelegate: RemoteDataLoadingDelegate {}
 class UsersViewModel {
     let userService: UserService
 
-    private var viewModels: [ListDiffable] = []
+    var viewModels: [ListDiffable] = []
     private var requestDisposable: Disposable?
     var isLoading = false
 
@@ -34,6 +34,7 @@ class UsersViewModel {
 
     init(userService: UserService) {
         self.userService = userService
+        viewModels.append(UsersSectionViewModel())
     }
 
     func loadMore() {

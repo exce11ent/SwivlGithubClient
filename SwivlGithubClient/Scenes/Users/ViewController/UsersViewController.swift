@@ -10,14 +10,7 @@ import UIKit
 import IGListKit
 import SafariServices
 
-class UsersViewController: UIViewController {
-
-    @IBOutlet weak var collectionView: UICollectionView!
-    var refreshControl: UIRefreshControl!
-
-    lazy var adapter: ListAdapter = {
-        return ListAdapter(updater: ListAdapterUpdater(), viewController: self)
-    }()
+class UsersViewController: RootCollectionViewController {
 
     var viewModel: UsersViewModel!
 
@@ -30,7 +23,6 @@ class UsersViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setupCollectionView()
         refreshControl.beginRefreshing()
         viewModel.reloadData()
 
@@ -38,22 +30,19 @@ class UsersViewController: UIViewController {
     }
 
 
-    private func setupCollectionView() {
-        refreshControl = UIRefreshControl()
-        refreshControl.addTarget(self,
-                                      action: #selector(refreshControlFired),
-                                      for: UIControlEvents.valueChanged)
-        collectionView.addSubview(refreshControl)
-        collectionView.alwaysBounceVertical = true
-
-        self.automaticallyAdjustsScrollViewInsets = false
-        adapter.collectionView = collectionView
+    override func setupCollectionView() {
+        super.setupCollectionView()
         adapter.dataSource = self
-        adapter.scrollViewDelegate = self
     }
 
-    @objc func refreshControlFired() {
+    override func refreshControlFired() {
+        super.refreshControlFired()
         viewModel.reloadData()
+    }
+
+    override func loadMoreData() {
+        super.loadMoreData()
+        viewModel.loadMore()
     }
 }
 
@@ -74,20 +63,6 @@ extension UsersViewController: ListAdapterDataSource {
 
     func emptyView(for listAdapter: ListAdapter) -> UIView? {
         return nil
-    }
-}
-
-extension UsersViewController: UIScrollViewDelegate {
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        guard scrollView.contentSize.height > scrollView.frame.height else {
-            return
-        }
-        let screenHeigh = UIScreen.main.bounds.height
-        let distance = scrollView.contentSize.height - (scrollView.contentOffset.y + scrollView.bounds.height)
-
-        if distance < screenHeigh {
-            viewModel.loadMore()
-        }
     }
 }
 

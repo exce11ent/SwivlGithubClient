@@ -35,6 +35,7 @@
 		FAB06D952137CEED008B0112 /* ShortProfileCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAB06D942137CEED008B0112 /* ShortProfileCollectionViewCell.xib */; };
 		FAB06D972137D84C008B0112 /* PageDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB06D962137D84C008B0112 /* PageDescriptor.swift */; };
 		FAB06D992137E6C7008B0112 /* AvatarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB06D982137E6C7008B0112 /* AvatarImageView.swift */; };
+		FAB06D9C2137E8E2008B0112 /* RootCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB06D9B2137E8E2008B0112 /* RootCollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,7 @@
 		FAB06D942137CEED008B0112 /* ShortProfileCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShortProfileCollectionViewCell.xib; sourceTree = "<group>"; };
 		FAB06D962137D84C008B0112 /* PageDescriptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageDescriptor.swift; sourceTree = "<group>"; };
 		FAB06D982137E6C7008B0112 /* AvatarImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarImageView.swift; sourceTree = "<group>"; };
+		FAB06D9B2137E8E2008B0112 /* RootCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootCollectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +179,7 @@
 		FA867B762136C62C008470E8 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				FAB06D9A2137E8C1008B0112 /* Root */,
 				FA867B782136C648008470E8 /* Followers */,
 				FA867B772136C63E008470E8 /* Users */,
 			);
@@ -351,6 +354,14 @@
 			path = ShortProfile;
 			sourceTree = "<group>";
 		};
+		FAB06D9A2137E8C1008B0112 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				FAB06D9B2137E8E2008B0112 /* RootCollectionViewController.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -508,6 +519,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAB06D9C2137E8E2008B0112 /* RootCollectionViewController.swift in Sources */,
 				FA867B752136C5CB008470E8 /* UsersViewController.swift in Sources */,
 				FAB06D992137E6C7008B0112 /* AvatarImageView.swift in Sources */,
 				FA208750213734D60056F52E /* UsersSectionViewModel.swift in Sources */,

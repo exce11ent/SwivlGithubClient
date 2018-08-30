@@ -60,6 +60,6 @@ extension GithubAPI: TargetType {
     }
 
     var headers: [String : String]? {
-        return [:]
+        return ["Authorization": "Bearer 36b6fe0a9aff33481f3f12604b8fae55a875896a"]
     }
 }

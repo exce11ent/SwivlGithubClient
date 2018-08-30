@@ -24,6 +24,10 @@ class UsersViewModel {
     private var requestDisposable: Disposable?
     var isLoading = false
 
+    var screenTitle: String {
+        return "Github users"
+    }
+
     private var usersSectionViewModel: UsersSectionViewModel? {
         return viewModels.first(where: { item in
             item is UsersSectionViewModel

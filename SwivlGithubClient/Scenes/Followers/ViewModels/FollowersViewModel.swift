@@ -16,12 +16,16 @@ class FollowersViewModel {
 
     let userViewModel: UserViewModel
     let userService: UserService
+    var screenTitle: String {
+        return userViewModel.nickname
+    }
 
     weak var delegate: FollowersViewModelDelegate?
     var viewModels: [ListDiffable] = []
 
     private var requestDisposable: Disposable?
     var isLoading = false
+    var hasLoadedAll = false
     var currentPage: Int = 1
 
     private var usersSectionViewModel: UsersSectionViewModel? {
@@ -43,7 +47,7 @@ class FollowersViewModel {
     }
 
     func loadMore() {
-        guard !isLoading else { return }
+        guard !isLoading && !hasLoadedAll else { return }
 
         isLoading = true
 
@@ -54,6 +58,10 @@ class FollowersViewModel {
             .subscribe { [weak self] event in
                 switch event {
                 case .next(let users):
+                    if users.count < paginator.perPage {
+                        self?.hasLoadedAll = true
+                    }
+
                     self?.usersSectionViewModel?.viewModels.append(contentsOf: users.map { UserViewModel(user: $0) })
                     self?.delegate?.didFinishLoading()
                     self?.currentPage += 1
@@ -70,6 +78,7 @@ class FollowersViewModel {
     func reloadData() {
         requestDisposable?.dispose()
         reloadViewModels()
+        hasLoadedAll = false
         currentPage = 1
         loadMore()
     }

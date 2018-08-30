@@ -32,6 +32,11 @@ class FollowersViewController: UIViewController {
         super.viewDidLoad()
 
         setupCollectionView()
+
+        refreshControl.beginRefreshing()
+        viewModel.reloadData()
+
+        navigationItem.title = viewModel.screenTitle
     }
 
 
@@ -108,7 +113,10 @@ extension FollowersViewController: UsersSectionControllerDelegate {
     }
 
     func didSelectUser(with viewModel: UserViewModel) {
-        
+        let followersViewModel = FollowersViewModel(userViewModel: viewModel,
+                                                    userService: self.viewModel.userService)
+        let followersViewController = FollowersViewController(viewModel: followersViewModel)
+        navigationController?.pushViewController(followersViewController, animated: true)
     }
 }
 

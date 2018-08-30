@@ -31,6 +31,10 @@ class UsersViewController: UIViewController {
         super.viewDidLoad()
 
         setupCollectionView()
+        refreshControl.beginRefreshing()
+        viewModel.reloadData()
+
+        navigationItem.title = viewModel.screenTitle
     }
 
 

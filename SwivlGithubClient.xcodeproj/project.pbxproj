@@ -34,6 +34,7 @@
 		FAB06D932137CEDF008B0112 /* ShortProfileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB06D922137CEDF008B0112 /* ShortProfileCollectionViewCell.swift */; };
 		FAB06D952137CEED008B0112 /* ShortProfileCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAB06D942137CEED008B0112 /* ShortProfileCollectionViewCell.xib */; };
 		FAB06D972137D84C008B0112 /* PageDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB06D962137D84C008B0112 /* PageDescriptor.swift */; };
+		FAB06D992137E6C7008B0112 /* AvatarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB06D982137E6C7008B0112 /* AvatarImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 		FAB06D922137CEDF008B0112 /* ShortProfileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortProfileCollectionViewCell.swift; sourceTree = "<group>"; };
 		FAB06D942137CEED008B0112 /* ShortProfileCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShortProfileCollectionViewCell.xib; sourceTree = "<group>"; };
 		FAB06D962137D84C008B0112 /* PageDescriptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageDescriptor.swift; sourceTree = "<group>"; };
+		FAB06D982137E6C7008B0112 /* AvatarImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -283,6 +285,7 @@
 			isa = PBXGroup;
 			children = (
 				FA867B972137230F008470E8 /* CollectionViewsCells */,
+				FAB06D982137E6C7008B0112 /* AvatarImageView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -506,6 +509,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA867B752136C5CB008470E8 /* UsersViewController.swift in Sources */,
+				FAB06D992137E6C7008B0112 /* AvatarImageView.swift in Sources */,
 				FA208750213734D60056F52E /* UsersSectionViewModel.swift in Sources */,
 				FAB06D862137C043008B0112 /* FollowersViewController.swift in Sources */,
 				FA20874E213734B60056F52E /* UserViewModel.swift in Sources */,

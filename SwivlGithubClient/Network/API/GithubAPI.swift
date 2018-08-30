@@ -19,7 +19,7 @@ let GithubAPIProvider = MoyaProvider<GithubAPI>(plugins: webPlugins)
 enum GithubAPI {
     case users(since: Int)
     case usersSearch(descriptor: SearchDescriptor)
-    case followers(userName: String)
+    case followers(userName: String, paginator: PageDescriptor)
 }
 
 extension GithubAPI: TargetType {
@@ -31,7 +31,7 @@ extension GithubAPI: TargetType {
         switch self {
         case .users:
             return "users"
-        case .followers(let userName):
+        case .followers(let userName, _):
             return "users/\(userName)/followers"
         case .usersSearch:
             return "search/users"
@@ -54,8 +54,8 @@ extension GithubAPI: TargetType {
         case .users(let since):
             return .requestParameters(parameters: ["since" : since],
                                       encoding: URLEncoding.default)
-        default:
-            return .requestPlain
+        case .followers(_, let paginator):
+            return .requestParameters(parameters: paginator.asParameters(), encoding: URLEncoding.default)
         }
     }
 

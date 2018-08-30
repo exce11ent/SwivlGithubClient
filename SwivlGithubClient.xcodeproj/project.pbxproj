@@ -26,6 +26,14 @@
 		FA867B9921372336008470E8 /* UserCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA867B9821372336008470E8 /* UserCollectionViewCell.swift */; };
 		FA867B9B21372345008470E8 /* UserCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA867B9A21372345008470E8 /* UserCollectionViewCell.xib */; };
 		FAB06D822137B70C008B0112 /* UIView+Nib.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB06D812137B70C008B0112 /* UIView+Nib.swift */; };
+		FAB06D862137C043008B0112 /* FollowersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB06D852137C043008B0112 /* FollowersViewController.swift */; };
+		FAB06D882137C054008B0112 /* FollowersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAB06D872137C054008B0112 /* FollowersViewController.xib */; };
+		FAB06D8A2137CA84008B0112 /* FollowersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB06D892137CA84008B0112 /* FollowersViewModel.swift */; };
+		FAB06D8C2137CB4E008B0112 /* UserSectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB06D8B2137CB4E008B0112 /* UserSectionViewModel.swift */; };
+		FAB06D8F2137CDF8008B0112 /* ShortProfileSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB06D8E2137CDF8008B0112 /* ShortProfileSectionController.swift */; };
+		FAB06D932137CEDF008B0112 /* ShortProfileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB06D922137CEDF008B0112 /* ShortProfileCollectionViewCell.swift */; };
+		FAB06D952137CEED008B0112 /* ShortProfileCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAB06D942137CEED008B0112 /* ShortProfileCollectionViewCell.xib */; };
+		FAB06D972137D84C008B0112 /* PageDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB06D962137D84C008B0112 /* PageDescriptor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +72,14 @@
 		FA867B9821372336008470E8 /* UserCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCollectionViewCell.swift; sourceTree = "<group>"; };
 		FA867B9A21372345008470E8 /* UserCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCollectionViewCell.xib; sourceTree = "<group>"; };
 		FAB06D812137B70C008B0112 /* UIView+Nib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Nib.swift"; sourceTree = "<group>"; };
+		FAB06D852137C043008B0112 /* FollowersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersViewController.swift; sourceTree = "<group>"; };
+		FAB06D872137C054008B0112 /* FollowersViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FollowersViewController.xib; sourceTree = "<group>"; };
+		FAB06D892137CA84008B0112 /* FollowersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersViewModel.swift; sourceTree = "<group>"; };
+		FAB06D8B2137CB4E008B0112 /* UserSectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSectionViewModel.swift; sourceTree = "<group>"; };
+		FAB06D8E2137CDF8008B0112 /* ShortProfileSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortProfileSectionController.swift; sourceTree = "<group>"; };
+		FAB06D922137CEDF008B0112 /* ShortProfileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortProfileCollectionViewCell.swift; sourceTree = "<group>"; };
+		FAB06D942137CEED008B0112 /* ShortProfileCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShortProfileCollectionViewCell.xib; sourceTree = "<group>"; };
+		FAB06D962137D84C008B0112 /* PageDescriptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageDescriptor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,7 +186,7 @@
 			children = (
 				FA20874C213734A10056F52E /* ViewModels */,
 				FA867B9321371FBC008470E8 /* SectionControllers */,
-				FA867B902137134C008470E8 /* View */,
+				FA867B902137134C008470E8 /* ViewController */,
 			);
 			path = Users;
 			sourceTree = "<group>";
@@ -178,6 +194,9 @@
 		FA867B782136C648008470E8 /* Followers */ = {
 			isa = PBXGroup;
 			children = (
+				FAB06D8D2137CDCF008B0112 /* SectionControllers */,
+				FAB06D842137C02D008B0112 /* ViewModels */,
+				FAB06D832137C023008B0112 /* ViewController */,
 			);
 			path = Followers;
 			sourceTree = "<group>";
@@ -230,6 +249,7 @@
 			isa = PBXGroup;
 			children = (
 				FA867B872136D7C3008470E8 /* SearchDescriptor.swift */,
+				FAB06D962137D84C008B0112 /* PageDescriptor.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -242,13 +262,13 @@
 			path = ResponseModels;
 			sourceTree = "<group>";
 		};
-		FA867B902137134C008470E8 /* View */ = {
+		FA867B902137134C008470E8 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
 				FA867B742136C5CB008470E8 /* UsersViewController.swift */,
 				FA867B8E21370FAC008470E8 /* UsersViewController.xib */,
 			);
-			path = View;
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		FA867B9321371FBC008470E8 /* SectionControllers */ = {
@@ -270,8 +290,8 @@
 		FA867B972137230F008470E8 /* CollectionViewsCells */ = {
 			isa = PBXGroup;
 			children = (
-				FA867B9821372336008470E8 /* UserCollectionViewCell.swift */,
-				FA867B9A21372345008470E8 /* UserCollectionViewCell.xib */,
+				FAB06D912137CEBC008B0112 /* ShortProfile */,
+				FAB06D902137CEAB008B0112 /* User */,
 			);
 			path = CollectionViewsCells;
 			sourceTree = "<group>";
@@ -282,6 +302,50 @@
 				FAB06D812137B70C008B0112 /* UIView+Nib.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FAB06D832137C023008B0112 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FAB06D852137C043008B0112 /* FollowersViewController.swift */,
+				FAB06D872137C054008B0112 /* FollowersViewController.xib */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		FAB06D842137C02D008B0112 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				FAB06D892137CA84008B0112 /* FollowersViewModel.swift */,
+				FAB06D8B2137CB4E008B0112 /* UserSectionViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		FAB06D8D2137CDCF008B0112 /* SectionControllers */ = {
+			isa = PBXGroup;
+			children = (
+				FAB06D8E2137CDF8008B0112 /* ShortProfileSectionController.swift */,
+			);
+			path = SectionControllers;
+			sourceTree = "<group>";
+		};
+		FAB06D902137CEAB008B0112 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				FA867B9821372336008470E8 /* UserCollectionViewCell.swift */,
+				FA867B9A21372345008470E8 /* UserCollectionViewCell.xib */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		FAB06D912137CEBC008B0112 /* ShortProfile */ = {
+			isa = PBXGroup;
+			children = (
+				FAB06D922137CEDF008B0112 /* ShortProfileCollectionViewCell.swift */,
+				FAB06D942137CEED008B0112 /* ShortProfileCollectionViewCell.xib */,
+			);
+			path = ShortProfile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -368,7 +432,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA867B5F2136C4D0008470E8 /* LaunchScreen.storyboard in Resources */,
+				FAB06D882137C054008B0112 /* FollowersViewController.xib in Resources */,
 				FA867B9B21372345008470E8 /* UserCollectionViewCell.xib in Resources */,
+				FAB06D952137CEED008B0112 /* ShortProfileCollectionViewCell.xib in Resources */,
 				FA867B8F21370FAC008470E8 /* UsersViewController.xib in Resources */,
 				FA867B5C2136C4D0008470E8 /* Assets.xcassets in Resources */,
 			);
@@ -441,15 +507,21 @@
 			files = (
 				FA867B752136C5CB008470E8 /* UsersViewController.swift in Sources */,
 				FA208750213734D60056F52E /* UsersSectionViewModel.swift in Sources */,
+				FAB06D862137C043008B0112 /* FollowersViewController.swift in Sources */,
 				FA20874E213734B60056F52E /* UserViewModel.swift in Sources */,
+				FAB06D8A2137CA84008B0112 /* FollowersViewModel.swift in Sources */,
+				FAB06D8C2137CB4E008B0112 /* UserSectionViewModel.swift in Sources */,
 				FA867B552136C4CF008470E8 /* AppDelegate.swift in Sources */,
 				FA867B8A2136DBD6008470E8 /* UserService.swift in Sources */,
 				FAB06D822137B70C008B0112 /* UIView+Nib.swift in Sources */,
+				FAB06D8F2137CDF8008B0112 /* ShortProfileSectionController.swift in Sources */,
 				FA867B7C2136C874008470E8 /* User.swift in Sources */,
 				FA867B842136D287008470E8 /* GithubAPI.swift in Sources */,
 				FA867B922137136E008470E8 /* UsersViewModel.swift in Sources */,
+				FAB06D932137CEDF008B0112 /* ShortProfileCollectionViewCell.swift in Sources */,
 				FA867B9521371FD1008470E8 /* UsersSectionController.swift in Sources */,
 				FA867B8D2136E16E008470E8 /* UsersResponse.swift in Sources */,
+				FAB06D972137D84C008B0112 /* PageDescriptor.swift in Sources */,
 				FA867B882136D7C3008470E8 /* SearchDescriptor.swift in Sources */,
 				FA867B9921372336008470E8 /* UserCollectionViewCell.swift in Sources */,
 			);

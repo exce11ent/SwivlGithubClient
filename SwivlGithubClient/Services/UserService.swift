@@ -11,7 +11,7 @@ import Moya
 
 protocol UserService {
     func getUsers(since: Int?) -> Observable<[User]>
-    func getFollowers(userName: String) -> Observable<[User]>
+    func getFollowers(userName: String, paginator: PageDescriptor) -> Observable<[User]>
 }
 
 class GithubUserService: UserService {
@@ -23,9 +23,9 @@ class GithubUserService: UserService {
             .map([User].self).debug()
     }
 
-    func getFollowers(userName: String) -> Observable<[User]> {
+    func getFollowers(userName: String, paginator: PageDescriptor) -> Observable<[User]> {
         return GithubAPIProvider.rx
-            .request(.followers(userName: userName))
+            .request(.followers(userName: userName, paginator: paginator))
             .asObservable()
             .map([User].self)
     }

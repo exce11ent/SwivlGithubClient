@@ -26,7 +26,7 @@ class RootCollectionViewController: UIViewController, UIScrollViewDelegate {
         refreshControl = UIRefreshControl()
         refreshControl.addTarget(self,
                                  action: #selector(refreshControlFired),
-                                 for: UIControlEvents.valueChanged)
+                                 for: UIControl.Event.valueChanged)
         collectionView.addSubview(refreshControl)
         collectionView.alwaysBounceVertical = true
 

@@ -406,6 +406,7 @@
 					};
 					FA867B642136C4D0008470E8 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1020;
 						TestTargetID = FA867B502136C4CF008470E8;
 					};
 				};
@@ -691,7 +692,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.vitaliikraiovyi.SwivlGithubClient;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -712,7 +713,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.vitaliikraiovyi.SwivlGithubClient;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -732,7 +733,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.vitaliikraiovyi.SwivlGithubClientTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwivlGithubClient.app/SwivlGithubClient";
 			};
@@ -753,7 +754,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.vitaliikraiovyi.SwivlGithubClientTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwivlGithubClient.app/SwivlGithubClient";
 			};

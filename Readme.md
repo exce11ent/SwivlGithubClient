@@ -1,6 +1,6 @@
 ### Installation
 
-Before running the project please preform following actions:
+Before running the project please perform following actions:
 
 1) Install all tools using bundler:
 

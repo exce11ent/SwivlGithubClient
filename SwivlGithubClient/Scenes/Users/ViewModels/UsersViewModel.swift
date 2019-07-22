@@ -17,9 +17,13 @@ protocol RemoteDataLoadingDelegate: class {
 
 protocol UsersViewModelDelegate: RemoteDataLoadingDelegate {}
 
+protocol UsersCoordinating {
+    func showProfileUrl(_ url: URL)
+    func showUser(with viewModel: UserViewModel)
+}
+
 class UsersViewModel {
     let userService: UserService
-
     var viewModels: [ListDiffable] = []
     private var requestDisposable: Disposable?
     var isLoading = false
@@ -35,9 +39,11 @@ class UsersViewModel {
     }
 
     weak var delegate: UsersViewModelDelegate?
+    private let coordinator: UsersCoordinating
 
-    init(userService: UserService) {
+    init(userService: UserService, coordinator: UsersCoordinating) {
         self.userService = userService
+        self.coordinator = coordinator
         viewModels.append(UsersSectionViewModel())
     }
 
@@ -68,6 +74,14 @@ class UsersViewModel {
         viewModels.removeAll()
         viewModels.append(UsersSectionViewModel())
         loadMore()
+    }
+
+    func selectUser(with viewModel: UserViewModel) {
+        coordinator.showUser(with: viewModel)
+    }
+
+    func selectProfileUrl(_ url: URL) {
+        coordinator.showProfileUrl(url)
     }
 }
 

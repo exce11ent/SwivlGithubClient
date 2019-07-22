@@ -7,20 +7,22 @@
 //
 
 import UIKit
+import RxSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    private var appCoordinator: AppCoordinator!
+    private let disposeBag = DisposeBag()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
-        let viewModel = UsersViewModel(userService: GithubUserService())
-        let listViewController = UsersViewController(viewModel: viewModel)
-        let navigationController = UINavigationController(rootViewController: listViewController)
-        window?.rootViewController = navigationController
-        window?.makeKeyAndVisible()
+        appCoordinator = AppCoordinator(window: window!)
+        appCoordinator.start()
+            .subscribe()
+            .disposed(by: disposeBag)
         
         return true
     }

@@ -83,17 +83,10 @@ extension FollowersViewController: FollowersViewModelDelegate {
 
 extension FollowersViewController: UsersSectionControllerDelegate {
     func didTapProfileLink(url: URL) {
-        let safari = SFSafariViewController(url: url)
-        navigationController?.present(safari, animated: true, completion: nil)
+        viewModel.selectProfileUrl(url)
     }
 
     func didSelectUser(with viewModel: UserViewModel) {
-        let followersViewModel = FollowersViewModel(userViewModel: viewModel,
-                                                    userService: self.viewModel.userService)
-        let followersViewController = FollowersViewController(viewModel: followersViewModel)
-        navigationController?.pushViewController(followersViewController, animated: true)
+        self.viewModel.selectUser(with: viewModel)
     }
 }
-
-
-

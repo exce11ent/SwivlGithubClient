@@ -12,6 +12,11 @@ import RxSwift
 
 protocol FollowersViewModelDelegate: RemoteDataLoadingDelegate {}
 
+protocol FollowersCoordinating {
+    func showProfileUrl(_ url: URL)
+    func showUser(with viewModel: UserViewModel)
+}
+
 class FollowersViewModel {
 
     let userViewModel: UserViewModel
@@ -34,8 +39,11 @@ class FollowersViewModel {
         }) as? UsersSectionViewModel
     }
 
-    init(userViewModel: UserViewModel, userService: UserService) {
+    private let coordinator: FollowersCoordinating
+
+    init(userViewModel: UserViewModel, coordinator: FollowersCoordinating, userService: UserService = GithubUserService()) {
         self.userViewModel = userViewModel
+        self.coordinator = coordinator
         self.userService = userService
         reloadViewModels()
     }
@@ -81,5 +89,13 @@ class FollowersViewModel {
         hasLoadedAll = false
         currentPage = 1
         loadMore()
+    }
+
+    func selectUser(with viewModel: UserViewModel) {
+        coordinator.showUser(with: viewModel)
+    }
+
+    func selectProfileUrl(_ url: URL) {
+        coordinator.showProfileUrl(url)
     }
 }
